@@ -10,6 +10,10 @@ using namespace std;
 
 char alphabet[] = { 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','r','s','t','u','w','z' };
 int difficultyLevel = 0;
+string difficultyLevelNames[3] = { "Latwy ", "Sredni", "Trudny" };
+int numberOfRounds = 3;
+int numberOfBots = 3;
+int yMax, xMax;
 
 void print_centered(WINDOW* win, int start_row, string text) {
     int center_col = win->_maxx / 2; 
@@ -23,6 +27,7 @@ void initColorPairs() {
     start_color();
     init_pair(1, COLOR_GREEN, COLOR_BLACK); // first value is text color and second is bg color
     init_pair(2, COLOR_RED, COLOR_BLACK);
+    init_pair(3, 15, COLOR_BLUE);
 }
 
 int randomLetterIndex() {
@@ -66,18 +71,17 @@ void mainMenu() {
     print_centered(stdscr, 7, "Autor: Maciej Czech"); 
     attroff(COLOR_PAIR(2));
     // create a window for input
-    int yMax, xMax;
     getmaxyx(stdscr, yMax, xMax);
-    WINDOW* menuwin = newwin(6, xMax - 12, yMax - 8, 5);
+    WINDOW* menuwin = newwin(7, xMax - 12, yMax - 8, 5);
     box(menuwin, 0, 0);
     refresh();
     wrefresh(menuwin);
     keypad(menuwin, true);
-    string choices[4] = { "Nowa gra", "Poziom trudnosci: Latwy", "O grze", "Wyjscie" };
+    string choices[5] = { "Nowa gra", "Poziom trudnosci: Latwy", "Liczba rund: 3", "Liczba botow: 3",  "Wyjscie"};
     int choice;
     int highlight = 0;
     while (1) {
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 5; i++) {
             if (i == highlight)
                 wattron(menuwin, A_REVERSE);
             mvwprintw(menuwin, i + 1, 1, choices[i].data());
@@ -92,53 +96,102 @@ void mainMenu() {
             break;
         case KEY_DOWN:
             highlight++;
-            if (highlight == 4)
-                highlight = 3;
+            if (highlight == 5)
+                highlight = 4;
             break;
         case KEY_LEFT:
-            if (highlight != 1)
-                break;
-            else {
+            if (highlight == 1) {
                 difficultyLevel--;
                 if (difficultyLevel == -1)
                     difficultyLevel = 2;
-                if (difficultyLevel == 2)
-                    choices[1] = "Poziom trudnosci: Trudny";
-                else if (difficultyLevel == 1)
-                    choices[1] = "Poziom trudnosci: Sredni";
-                else if (difficultyLevel == 0)
-                    choices[1] = "Poziom trudnosci: Latwy ";
+                choices[1] = "Poziom trudnosci: " + difficultyLevelNames[difficultyLevel];
             }
+            else if (highlight == 2) {
+                numberOfRounds--;
+                if (numberOfRounds == 0)
+                    numberOfRounds = 5;
+                choices[2] = "Liczba rund: " + to_string(numberOfRounds);
+            }
+            else if (highlight == 3) {
+                numberOfBots--;
+                if (numberOfBots == 0)
+                    numberOfBots = 5;
+                choices[3] = "Liczba botow: " + to_string(numberOfBots);
+            }
+            else
+                break;
             break;
         case KEY_RIGHT:
-            if (highlight != 1)
-                break;
-            else {
+            if (highlight == 1) {
                 difficultyLevel++;
                 if (difficultyLevel == 3)
                     difficultyLevel = 0;
-                if (difficultyLevel == 2)
-                    choices[1] = "Poziom trudnosci: Trudny";
-                else if (difficultyLevel == 1)
-                    choices[1] = "Poziom trudnosci: Sredni";
-                else if (difficultyLevel == 0)
-                    choices[1] = "Poziom trudnosci: Latwy ";
+                choices[1] = "Poziom trudnosci: " + difficultyLevelNames[difficultyLevel];
             }
+            else if (highlight == 2) {
+                numberOfRounds++;
+                if (numberOfRounds == 6)
+                    numberOfRounds = 1;
+                choices[2] = "Liczba rund: " + to_string(numberOfRounds);
+            }
+            else if (highlight == 3) {
+                numberOfBots++;
+                if (numberOfBots == 6)
+                    numberOfBots = 1;
+                choices[3] = "Liczba botow: " + to_string(numberOfBots);
+            }
+            else
+                break;
             break;
-
         default:
             break;
         }
-        if (choice == 10)
+        // this check is to prevent starting the game while user is selecting bot/round count
+        if (choice == 10 && highlight == 0) {
+            flash(); // neat effect
             break;
+        }
+        else if (choice == 10 && highlight == 4) { // user picked exit option
+            flash();
+            exit(0);
+        }
     }
+    clear();
 }
+
+void startingGameAnimation() {
+    // load ascii art for starting game text
+    string line;
+    ifstream startingGameLogo("C:\\Users\\macie\\Desktop\\assets\\asciiart\\starting.txt");
+    attron(COLOR_PAIR(3)); // green text on black bg
+    for (int i = 0; i < 8; i++) {
+        getline(startingGameLogo, line);
+        print_centered(stdscr, i, line);
+        refresh();
+    }
+    attroff(COLOR_PAIR(3));
+    WINDOW* parameters = newwin(5, xMax - 12, 9, 5);
+    box(parameters, 0, 0); 
+    mvwprintw(parameters, 1, 1, ("Poziom trudnosci: " + difficultyLevelNames[difficultyLevel]).data());
+    mvwprintw(parameters, 2, 1, ("Liczba rund: " + to_string(numberOfRounds)).data());
+    mvwprintw(parameters, 3, 1, ("Liczba botow: " + to_string(numberOfBots)).data()); 
+    wrefresh(parameters);
+    attron(COLOR_PAIR(1));
+    for (int i = 5; i > 0; i--) {
+        print_centered(stdscr, 15, "Zaczynamy za " + to_string(i)); 
+        refresh();
+        Sleep(1000);
+    }
+    attroff(COLOR_PAIR(1));
+}
+
 
 int main()
 {
-    initscr();
-    initColorPairs();
-    mainMenu();
+    initscr(); // start ncurses mode
+    initColorPairs(); // initialize color pairs used in program
+    mainMenu(); // print main menu
+    startingGameAnimation(); // shows what game options user picked
     srand(time(NULL));
     int litera = randomLetterIndex();
     clear();
