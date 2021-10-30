@@ -37,7 +37,7 @@ int randomLetterIndex() {
 void letterAnimation(int index) {
     attron(COLOR_PAIR(2));
     string line; 
-    ifstream asciiAlphabet("C:\\Users\\macie\\Desktop\\assets\\asciiart\\alfabet.txt");
+    ifstream asciiAlphabet("assets\\asciiart\\alphabet.txt");
     for (int i = 0; i <= index; i++) {
         if (i == index) {
             attron(COLOR_PAIR(1));
@@ -60,7 +60,7 @@ void letterAnimation(int index) {
 void mainMenu() {
     // load ascii art logo
     string line;
-    ifstream logo("C:\\Users\\macie\\Desktop\\assets\\asciiart\\logo.txt");
+    ifstream logo("assets\\asciiart\\logo.txt");
     attron(COLOR_PAIR(1)); // green text on black bg
     for (int i = 0; i < 6; i++) {
         getline(logo, line);
@@ -162,7 +162,7 @@ void mainMenu() {
 void startingGameAnimation() {
     // load ascii art for starting game text
     string line;
-    ifstream startingGameLogo("C:\\Users\\macie\\Desktop\\assets\\asciiart\\starting.txt");
+    ifstream startingGameLogo("assets\\asciiart\\starting.txt");
     attron(COLOR_PAIR(3)); // green text on black bg
     for (int i = 0; i < 8; i++) {
         getline(startingGameLogo, line);

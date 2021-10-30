@@ -1,0 +1,409 @@
+Augustów
+Aleksandrów Łódzki
+Andrychów
+Aleksandrów Kujawski
+Alwernia
+Annopol
+Andrespol
+Ahmadabad
+Aleksandria
+Ankara
+Abidżan
+Algier
+Aleppo
+Addis Abeba
+Akra
+Amman
+Ałmaty
+Bydgoszcz
+Białystok
+Bielsko-Biała
+Bytom
+Bełchatów
+Biała Podlaska
+Będzin
+Bolesławiec
+Brzeg
+Bielawa
+Bangkok
+Bogota
+Biszkek
+Bagdad
+Baku
+Berlin
+Buenos Aires
+Bruksela
+Belo Horizonte
+Brasília
+Częstochowa
+Chorzów
+Chełm
+Ciechanów
+Chojnice
+Chrzanów
+Czechowice-Dziedzice
+Cieszyn
+Czeladź
+Czerwionka-Leszczyny
+Chongqing
+Canberra
+Chennai
+Casablanca
+Chartum
+Chicago
+Cchinwali
+Caracas
+Cali
+Castries
+Dąbrowa Górnicza
+Dębica
+Dzierżoniów
+Działdowo
+Dęblin
+Dębno
+Darłowo
+Dąbrowa Tarnowska
+Drawsko Pomorskie
+Dobre Miasto
+Delhi
+Dhaka
+Dżakarta
+Doha
+Dakar
+Dżudda
+Duszanbe
+Dżibuti
+Dublin
+Damaszek
+Elbląg
+Ełk
+Erywań
+Essen
+El Alto
+El Paso
+Enshi
+Ezhou
+Eskişehir
+Enugu
+Enping
+Edynburg
+Frampol
+Frombork
+Fortaleza
+Fuzhou
+Freetown
+Fuyang
+Fushun
+Fukuoka
+Fengcheng
+Fez
+Fuqing
+Frankfurt nad Menem
+Gdańsk
+Gdynia
+Gliwice
+Gorzów Wielkopolski
+Grudziądz
+Gniezno
+Głogów
+Grodzisk Mazowiecki
+Giżycko
+Gorlice
+Guiyang
+Giza
+Guayaquil
+Guadalajara
+Gwangju
+Gaziantep
+Gitega
+Gaborone
+Glasgow
+Georgetown
+Hajnówka
+Hrubieszów
+Halinów
+Hel
+Hongkong
+Harbin
+Hawana
+Houston
+Hamburg
+Helsinki
+Haga
+Hanoi
+Honiara
+Harare
+Inowrocław
+Iława
+Imielin
+Iłża
+Iłowa
+Izbica Kujawska
+Ińsko
+Iwonicz-Zdrój
+Inczon
+Ibadan
+Isfahan
+Islamabad
+Indianapolis
+Iżewsk
+Irkuck
+Içel
+Irbil
+Izmir
+Jaworzno
+Jastrzębie-Zdrój
+Jelenia Góra
+Jarosław
+Jasło
+Jarocin
+Jawor
+Józefów
+Jelcz-Laskowice
+Jędrzejów
+Jerozolima
+Jamusukro
+Johannesburg
+Jekaterynburg
+Juárez
+Jinan
+Jilin
+Jinjiang
+Jianyang
+Jaunde
+Kraków
+Katowice
+Kielce
+Koszalin
+Kalisz
+Konin
+Kędzierzyn-Koźle
+Krosno
+Kołobrzeg
+Kutno
+Karaczi
+Kinszasa
+Kair
+Kabul
+Kalkuta
+Kijów
+Konakry
+Kingston
+Kuwejt
+Kiszyniów
+Lublin
+Legnica
+Lubin
+Leszno
+Legionowo
+Lębork
+Luboń
+Lubliniec
+Lubartów
+Lubań
+Londyn
+Lima
+Lagos
+Los Angeles
+Luanda
+La Paz
+Lilongwe
+Luksemburg
+Libreville
+Lizbona
+Mysłowice
+Mielec
+Mińsk Mazowiecki
+Malbork
+Marki
+Myszków
+Mława
+Mrągowo
+Myślenice
+Międzyrzecz
+Mumbaj
+Moskwa
+Meksyk
+Melbourne
+Madryt
+Medellín
+Monako
+Montréal
+Mińsk
+Manila
+Nowy Sącz
+Nysa
+Nowa Sól
+Nowy Targ
+Nowy Dwór Mazowiecki
+Nowa Ruda
+Nakło nad Notecią
+Nowogard
+Namysłów
+Nisko
+Nowy Jork
+Nankin
+Nairobi
+Nur-Sułtan
+Nassau
+Nikozja
+Ndżamena
+Nowe Delhi
+Niamey
+Nawakszut
+Olsztyn
+Opole
+Ostrów Wielkopolski
+Ostrowiec Świętokrzyski
+Ostrołęka
+Otwock
+Oświęcim
+Oleśnica
+Olkusz
+Ostróda
+Osaka
+Omdurman
+Ottawa
+Okayama
+Orlando
+Oslo
+Ostrawa
+Omaha
+Odessa
+Poznań
+Płock
+Piotrków Trybunalski
+Piła
+Pabianice
+Pruszków
+Przemyśl
+Piekary Śląskie
+Piaseczno
+Puławy
+Pekin
+Pjongjang
+Pune
+Paryż
+Perth
+Phoenix
+Praga
+Phnom Penh
+Pjongjang
+Pretoria
+Radom
+Rzeszów
+Rybnik
+Ruda Śląska
+Racibórz
+Rumia
+Radomsko
+Reda
+Rydułtowy
+Rzym
+Rijad
+Roseau
+Reykjavík
+Ryga
+Rabat
+Rotterdam
+Rio de Janeiro
+Rimini
+Richmond
+Szczecin
+Sosnowiec
+Słupsk
+Siedlce
+Suwałki
+Stargard
+Siemianowice Śląskie
+Stalowa Wola
+Starachowice
+Skierniewice
+Stambuł
+Szanghaj
+São Paulo
+Seul
+Sankt Petersburg
+Singapur
+Sydney
+Sarajewo
+Sucre
+Skopje
+Sri Dźajawardanapura Kotte
+Toruń
+Tychy
+Tarnów
+Tomaszów Mazowiecki
+Tarnowskie Góry
+Tczew
+Tarnobrzeg
+Turek
+Trzebinia
+Tomaszów Lubelski
+Tokio
+Tehran
+Toronto
+Tajpej
+Taszkient
+Tirana
+Thimphu
+Tallinn
+Tbilisi
+Tunis
+Ustroń
+Ustka
+Ustrzyki Dolne
+Ujście
+Uniejów
+Ujazd
+Urzędów
+Ulanów
+Ułan Bator
+Urumczi
+Ułan-Ude
+Ufa
+Ujjain
+Uljanowsk
+Ulsan
+Ulhasnagar
+Uberlandia
+Warszawa
+Wrocław
+Wałbrzych
+Włocławek
+Wejherowo
+Wodzisław Śląski
+Wołomin
+Września
+Wyszków
+Wągrowiec
+Wuhan
+Wiedeń
+Waszyngton
+Wagadugu
+Wientian
+Wilno
+Windhuk
+Wellington
+Watykan
+Wuxi
+Zabrze
+Zielona Góra
+Zamość
+Zgierz
+Zawiercie
+Zduńska Wola
+Ząbki
+Zgorzelec
+Zakopane
+Zambrów
+Zibo
+Zhengzhou
+Zhongshan
+Zaozhuang
+Zhanjiang
+Zhuhai
+Zagrzeb
+Zurych
+Zhuozhou
+Zahedan
