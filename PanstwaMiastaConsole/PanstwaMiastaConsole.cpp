@@ -6,6 +6,9 @@
 #include <cstdlib>
 #include <windows.h>
 #include <string>
+#include <vector>
+#include <algorithm>
+
 using namespace std; 
 
 char alphabet[] = { 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','r','s','t','u','w','z' };
@@ -14,6 +17,7 @@ string difficultyLevelNames[3] = { "Latwy ", "Sredni", "Trudny" };
 int numberOfRounds = 3;
 int numberOfBots = 3;
 int yMax, xMax;
+vector<int> randomIndexes;
 
 void print_centered(WINDOW* win, int start_row, string text) {
     int center_col = win->_maxx / 2; 
@@ -30,8 +34,15 @@ void initColorPairs() {
     init_pair(3, 15, COLOR_BLUE);
 }
 
-int randomLetterIndex() {
-    return rand() % 22; 
+void drawRandomIndexes() {
+    for (int i = 0; i < numberOfRounds; i++) {
+        int random = rand() % 22;
+        // ensure that every letter will be unique
+        if (find(randomIndexes.begin(), randomIndexes.end(), random) == randomIndexes.end())
+            randomIndexes.push_back(random);
+        // DO NAPRAWIENIA!!! BO JAK WARTOSC SIE POWTARZA TO NIC SIE NIE DZIEJE
+        // ZAMIENIC NA WHILE CZY COS
+    }
 }
 
 void letterAnimation(int index) {
@@ -185,6 +196,15 @@ void startingGameAnimation() {
     attroff(COLOR_PAIR(1));
 }
 
+void game() {
+    // int currentRound = 0;
+    for (size_t i = 0; i < randomIndexes.size(); i++) {
+        // currentRound = static_cast<int>(i); 
+        clear();
+        letterAnimation(randomIndexes[i]); 
+    }
+}
+
 
 int main()
 {
@@ -192,9 +212,8 @@ int main()
     initColorPairs(); // initialize color pairs used in program
     mainMenu(); // print main menu
     startingGameAnimation(); // shows what game options user picked
-    srand(time(NULL));
-    int litera = randomLetterIndex();
-    clear();
-    letterAnimation(litera); 
-    endwin(); 
+    srand(time(NULL)); // start randomizing
+    drawRandomIndexes(); // fill vector with unique random letter indexes
+    clear(); // clear screen
+    game(); // game
 }
