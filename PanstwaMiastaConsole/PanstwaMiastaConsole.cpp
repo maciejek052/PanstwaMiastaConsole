@@ -195,14 +195,18 @@ void startingGameAnimation() {
 
 void game() {
     // vectors to keep possible answers for each category
-    vector<string> possibleAnswers1, possibleAnswers2, possibleAnswers3, possibleAnswers4, possibleAnswers5, possibleAnswers6;
+    vector<pair<int, string>> possibleAnswers; 
     vector<string> allGivenAnswers;
     string input[6]; 
+    bool cheatWasUsed = false; 
     int playerPoints = 0;
     int botsPoints[5] = { 0 };
+    string cheatText; 
     string choices[7] = { "Panstwo:", "Miasto:", "Zwierze:", "Zawod:",  "Owoc lub warzywo:", "Kolor:", "ZAKONCZ RUNDE" };
     for (size_t x = 0; x < randomIndexes.size(); x++) { // iterate through every round
         for (auto& a : input) a = ""; // clear input array
+        cheatWasUsed = false; 
+        cheatText = "Masz do dyspozycji jedna podpowiedz, aby jej uzyc nacisnij F2"; 
         clear();
         int letterIndex = randomIndexes[x]; 
         letterAnimation(letterIndex);
@@ -210,14 +214,13 @@ void game() {
         string line;
         ifstream roundArt("assets\\asciiart\\round.txt");
         attron(COLOR_PAIR(1)); // green text on black bg
-
-        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        // TO FIX BECAUSE IT SHOWS ROUND 1 EVERY TIME
-
-        for (int i = 0; i < 6; i++) { 
-            getline(roundArt, line);
-            print_centered(stdscr, i, line);
-            refresh();
+        // print ascii art for current round number
+        for (int i = 0; i < x+1; i++) {
+            for (int j = 0; j < 6; j++) {
+                getline(roundArt, line);
+                print_centered(stdscr, j, line);
+                refresh();
+            }
         }
         string letterMessage = "Wylosowana litera: ";
         letterMessage.push_back(alphabet[letterIndex] - 32); 
@@ -234,7 +237,7 @@ void game() {
         noecho();
         while (1) {
             wclear(gamewin); 
-            box(gamewin, 0, 0);
+            box(gamewin, 0, 0); 
             for (int i = 0; i < 7; i++) {
                 if (i == highlight)
                     wattron(gamewin, A_REVERSE);
@@ -242,6 +245,10 @@ void game() {
                 wattroff(gamewin, A_REVERSE);
                 refresh();
                 wrefresh(gamewin);
+            }
+            if (difficultyLevel != 2) {
+                print_centered(stdscr, 22, cheatText);
+                refresh(); 
             }
             choice = wgetch(gamewin);
             switch (choice) {
@@ -255,10 +262,14 @@ void game() {
                 if (highlight == 7)
                     highlight = 6;
                 break;
-            case KEY_LEFT: // if user accidentally hits this button
+            case KEY_F(2):
+                if (difficultyLevel != 2 && cheatWasUsed == false) {
+                    move(22, 0);
+                    clrtoeol();
+                    cheatWasUsed = true; 
+                    cheatText = "W tej rundzie wykorzystales juz podpowiedz"; 
+                }
                 break;
-            case KEY_RIGHT:
-                break; 
             case 8: // backspace
                 if (!input[highlight].empty()) {
                     input[highlight].pop_back(); 
@@ -269,7 +280,9 @@ void game() {
             default:
                 // it should be changed to only accept cases 65-122 (ascii characters)
                 if (highlight != 6) {
-                    input[highlight] += choice; 
+                    // check if user pressed allowed key (only big/small letters, space and dash)
+                    if (choice >= 65 && choice <= 90 || choice >= 97 && choice <= 122 || choice == 32 || choice == 45)
+                        input[highlight] += choice; 
                 }
             }
             if (choice == 10 && highlight == 6) {
