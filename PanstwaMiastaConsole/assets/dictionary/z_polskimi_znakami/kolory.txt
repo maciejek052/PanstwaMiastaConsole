@@ -4,34 +4,34 @@ atramentowy
 amarantowy
 alabastrowy
 akwamaryna
-bialy
-bezowy
+biały
+beżowy
 bury
-brazowy
+brązowy
 brunatny
 burgund
 bordo
-blekitny
+błękitny
 bursztynowy
 biskupi
 ceglasty
 chabrowy
 cielisty
-cukierkowy roz
+cukierkowy róż
 cyklamen
 czarny
 czekoladowy
 czerwony
-debowy
+dębowy
 dyniowy
 ecru
 eukaliptusowy
 eozyna
 fioletowy
 fuksja
-fiolkowy
+fiołkowy
 feldgrau
-golebi
+gołębi
 grafitowy
 granatowy
 groszkowy
@@ -44,7 +44,7 @@ imbirowy
 indygo
 irysowy
 jagodowy
-jasminowy
+jaśminowy
 kakaowy
 kardynalski
 krwisty
@@ -52,19 +52,19 @@ karmazynowy
 karminowy
 kawowy
 khaki
-kosc sloniowa
+kość słoniowa
 kremowy
 lapis lazuli
 lazurowy
 liliowy
 lawendowy
 limonkowy
-lososiowy
+łososiowy
 magenta
-mahon
+mahoń
 malachitowy
 miedziany
-mietowy
+miętowy
 miodowy
 morski
 mysi
@@ -72,24 +72,24 @@ nefrytowy
 nektarynkowy
 niebieski
 niebieskofioletowy
-oberzynowy
+oberżynowy
 ochra
 orzechowy
 oliwkowy
-oranz
-perlowy
+oranż
+perłowy
 porcelanowy
 piaskowy
 platynowy
 popielaty
 pistacjowy
 patynowy
-pomaranczowy
-pasowy
+pomarańczowy
+pąsowy
 purpurowy
 piwny
-rozowy
-roz wenecki
+różowy
+róż wenecki
 rubinowy
 rudy
 siwy
@@ -97,13 +97,13 @@ srebrny
 szary
 smolisty
 sepia
-spizowy
+spiżowy
 siarkowy
 seledynowy
 szmaragdowy
 szafirowy
-sliwkowy
-swiniowy
+śliwkowy
+świniowy
 tycjan
 tabaczkowy
 truskawkowy
@@ -114,12 +114,12 @@ ultramaryna
 umbra
 woskowy
 wrzosowy
-wisniowy
+wiśniowy
 winny
-zielen butelkowa
+zieleń butelkowa
 zielony
-zlocisty
-zloty
+złocisty
+złoty
 ziemisty
-zolty
-zurawinowy
+żółty
+żurawinowy

@@ -1,138 +1,138 @@
-Acerola
-Agrest
-Ananas
-Antonówka
-Aronia
-Awokado
-Arbuz
-Banan
-Borówka amerykańska
-Brzoskwinia
-Bób
-Brukselka
-Bakłażan
-Brokuł
-Botwina
-Burak
-Batat
-Brukiew
-Cytryna
-Czereśnia
-Cytron
-Czarny bez
-Czosnek
-Cebula
-Chrzan
-Cukinia
-Cykoria
-Durian
-Dżakfrut
-Daktyl
-Dzika róża
-Dynia
-Dymka
-Eugenia
-Endywia
-Figa
-Fistaszki
-Flaszowiec
-Fasola
-Fenkuł
-Gruszka
-Gujawa
-Grejpfrut
-Granat
-Granadilla
-Głóg
-Groch zwyczajny
-Gurdlina wężowa
-Hurma
-Habanero
-Hokkaido
-Irga
-Imbir
-Jabłko
-Jagoda
-Jujuba
-Jeżyna
-Jarzębina
-Jarmuż
-Jalapeno
-Kiwi
-Kasztan jadalny
-Kumkwat
-Karambola
-Kukurydza
-Kapusta
-Kalafior
-Kabaczek
-Kalarepa
-Karczoch
-Kiwano
-Liczi
-Longan
-Limonka
-Leszczyna pospolita
-Lubczyk
-Mangostan
-Morela
-Mango
-Mandarynka
-Malina
-Mirabelka
-Morwa
-Miechunka
-Marchew
-Melon
-Maniok
-Nektarynka
-Nerkowiec
-Nanercz
-Nieśplik
-Naga Jolokia
-Oliwka
-Orzech kokosowy
-Orzech cola
-Opuncja
-Orzech włoski
-Ogórek
-Pitaja
-Pigwa
-Papaja
-Pomarańcza
-Pomelo
-Porzeczka
-Poziomka
-Papryka
-Pietruszka
-Patison
-Por
-Pomidor
-Rambutan
-Renkloda
-Reneta
-Rzodkiewka
-Rzodkiew japońska
-Rabarbar
-Rzepa
-Rukiew
-Roszpunka warzywna
-Rukola
-Salak
-Sapodilla
-Sałata
-Seler
-Szparag
-Szpinak
-Truskawka
-Tarnina
-Tamarillo
-Tamarynd
-Topinambur
-Umkokolo
-Ume
-Winogrono
-Wiśnia
-Wężymord
-Wapato
-Wilec ziemniaczany
+acerola
+agrest
+ananas
+antonowka
+aronia
+awokado
+arbuz
+banan
+borowka amerykanska
+brzoskwinia
+bob
+brukselka
+baklazan
+brokul
+botwina
+burak
+batat
+brukiew
+cytryna
+czeresnia
+cytron
+czarny bez
+czosnek
+cebula
+chrzan
+cukinia
+cykoria
+durian
+dzakfrut
+daktyl
+dzika roza
+dynia
+dymka
+eugenia
+endywia
+figa
+fistaszki
+flaszowiec
+fasola
+fenkul
+gruszka
+gujawa
+grejpfrut
+granat
+granadilla
+glog
+groch zwyczajny
+gurdlina wezowa
+hurma
+habanero
+hokkaido
+irga
+imbir
+jablko
+jagoda
+jujuba
+jezyna
+jarzebina
+jarmuz
+jalapeno
+kiwi
+kasztan jadalny
+kumkwat
+karambola
+kukurydza
+kapusta
+kalafior
+kabaczek
+kalarepa
+karczoch
+kiwano
+liczi
+longan
+limonka
+leszczyna pospolita
+lubczyk
+mangostan
+morela
+mango
+mandarynka
+malina
+mirabelka
+morwa
+miechunka
+marchew
+melon
+maniok
+nektarynka
+nerkowiec
+nanercz
+niesplik
+naga jolokia
+oliwka
+orzech kokosowy
+orzech cola
+opuncja
+orzech wloski
+ogorek
+pitaja
+pigwa
+papaja
+pomarancza
+pomelo
+porzeczka
+poziomka
+papryka
+pietruszka
+patison
+por
+pomidor
+rambutan
+renkloda
+reneta
+rzodkiewka
+rzodkiew japonska
+rabarbar
+rzepa
+rukiew
+roszpunka warzywna
+rukola
+salak
+sapodilla
+salata
+seler
+szparag
+szpinak
+truskawka
+tarnina
+tamarillo
+tamarynd
+topinambur
+umkokolo
+ume
+winogrono
+wisnia
+wezymord
+wapato
+wilec ziemniaczany

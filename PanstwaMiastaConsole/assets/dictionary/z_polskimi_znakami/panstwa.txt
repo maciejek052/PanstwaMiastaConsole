@@ -11,7 +11,7 @@ Argentyna
 Armenia
 Australia
 Austria
-Azerbejdzan
+Azerbejdżan
 Bahamy
 Bahrajn
 Bangladesz
@@ -20,42 +20,42 @@ Belgia
 Belize
 Benin
 Bhutan
-Bialorus
+Białoruś
 Boliwia
-Bosnia i Hercegowina
+Bośnia i Hercegowina
 Botswana
 Brazylia
 Brunei
-Bulgaria
+Bułgaria
 Burkina Faso
 Burundi
 Chile
 Chiny
 Chorwacja
 Cypr
-Cypr Polnocny
+Cypr Północny
 Czad
-Czarnogora
+Czarnogóra
 Czechy
 Dania
 Demokratyczna Republika Konga
 Dominika
 Dominikana
-Dzibuti
+Dżibuti
 Egipt
 Ekwador
 Erytrea
 Estonia
 Eswatini
 Etiopia
-Fidzi
+Fidżi
 Filipiny
 Finlandia
 Francja
 Gabon
 Gambia
 Ghana
-Gorski Karabach
+Górski Karabach
 Grecja
 Grenada
 Gruzja
@@ -63,7 +63,7 @@ Gujana
 Gwatemala
 Gwinea
 Gwinea Bissau
-Gwinea Rownikowa
+Gwinea Równikowa
 Haiti
 Hiszpania
 Holandia
@@ -73,14 +73,14 @@ Indonezja
 Irak
 Iran
 Irlandia
-Irlandia Polnocna
+Irlandia Północna
 Islandia
 Izrael
 Jamajka
 Japonia
 Jemen
 Jordania
-Kambodza
+Kambodża
 Kamerun
 Kanada
 Katar
@@ -91,8 +91,8 @@ Kiribati
 Kolumbia
 Komory
 Kongo
-Korea Poludniowa
-Korea Polnocna
+Korea Południowa
+Korea Północna
 Kosowo
 Kostaryka
 Kuba
@@ -105,8 +105,8 @@ Libia
 Liechtenstein
 Litwa
 Luksemburg
-Lotwa
-Macedonia Polnocna
+Łotwa
+Macedonia Północna
 Madagaskar
 Malawi
 Malediwy
@@ -119,7 +119,7 @@ Mauritius
 Meksyk
 Mikronezja
 Mjanma (dawniej Birma)
-Moldawia
+Mołdawia
 Monako
 Mongolia
 Mozambik
@@ -134,11 +134,11 @@ Nikaragua
 Norwegia
 Nowa Zelandia
 Oman
-Osetia Poludniowa
+Osetia Południowa
 Gabon
 Gambia
 Ghana
-Gorski Karabach
+Górski Karabach
 Grecja
 Grenada
 Gruzja
@@ -146,10 +146,10 @@ Gujana
 Gwatemala
 Gwinea
 Gwinea Bissau
-Gwinea Rownikowa
-Republika Poludniowej Afryki
-Republika Srodkowoafrykanska
-Republika Zielonego Przyladka
+Gwinea Równikowa
+Republika Południowej Afryki
+Republika Środkowoafrykańska
+Republika Zielonego Przylądka
 Rosja
 Rumunia
 Rwanda
@@ -165,20 +165,20 @@ Serbia
 Seszele
 Sierra Leone
 Singapur
-Slowacja
-Slowenia
+Słowacja
+Słowenia
 Somalia
 Somaliland
 Sri Lanka
 Stany Zjednoczone
 Sudan
-Sudan Poludniowy
+Sudan Południowy
 Surinam
 Syria
 Szkocja
 Szwajcaria
 Szwecja
-Tadzykistan
+Tadżykistan
 Tajlandia
 Tanzania
 Timor Wschodni
@@ -197,14 +197,14 @@ Vanuatu
 Walia
 Watykan
 Wenezuela
-Wegry
+Węgry
 Wielka Brytania
 Wietnam
-Wlochy
-Wybrzeze Kosci Sloniowej
+Włochy
+Wybrzeże Kości Słoniowej
 Wyspy Marshalla
 Wyspy Salomona
-Wyspy Swietego Tomasza i Ksiazeca
+Wyspy Świętego Tomasza i Książęca
 Zambia
 Zimbabwe
 Zjednoczone Emiraty Arabskie

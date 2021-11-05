@@ -1,28 +1,28 @@
-Augustow
-Aleksandrow Lodzki
-Andrychow
-Aleksandrow Kujawski
+Augustów
+Aleksandrów Łódzki
+Andrychów
+Aleksandrów Kujawski
 Alwernia
 Annopol
 Andrespol
 Ahmadabad
 Aleksandria
 Ankara
-Abidzan
+Abidżan
 Algier
 Aleppo
 Addis Abeba
 Akra
 Amman
-Almaty
+Ałmaty
 Bydgoszcz
-Bialystok
-Bielsko-Biala
+Białystok
+Bielsko-Biała
 Bytom
-Belchatow
-Biala Podlaska
-Bedzin
-Boleslawiec
+Bełchatów
+Biała Podlaska
+Będzin
+Bolesławiec
 Brzeg
 Bielawa
 Bangkok
@@ -34,16 +34,16 @@ Berlin
 Buenos Aires
 Bruksela
 Belo Horizonte
-Brasilia
-Czestochowa
-Chorzow
-Chelm
-Ciechanow
+Brasília
+Częstochowa
+Chorzów
+Chełm
+Ciechanów
 Chojnice
-Chrzanow
+Chrzanów
 Czechowice-Dziedzice
 Cieszyn
-Czeladz
+Czeladź
 Czerwionka-Leszczyny
 Chongqing
 Canberra
@@ -55,35 +55,35 @@ Cchinwali
 Caracas
 Cali
 Castries
-Dabrowa Gornicza
-Debica
-Dzierzoniow
-Dzialdowo
-Deblin
-Debno
-Darlowo
-Dabrowa Tarnowska
+Dąbrowa Górnicza
+Dębica
+Dzierżoniów
+Działdowo
+Dęblin
+Dębno
+Darłowo
+Dąbrowa Tarnowska
 Drawsko Pomorskie
 Dobre Miasto
 Delhi
 Dhaka
-Dzakarta
+Dżakarta
 Doha
 Dakar
-Dzudda
+Dżudda
 Duszanbe
-Dzibuti
+Dżibuti
 Dublin
 Damaszek
-Elblag
-Elk
-Erywan
+Elbląg
+Ełk
+Erywań
 Essen
 El Alto
 El Paso
 Enshi
 Ezhou
-Eskisehir
+Eskişehir
 Enugu
 Enping
 Edynburg
@@ -99,15 +99,15 @@ Fengcheng
 Fez
 Fuqing
 Frankfurt nad Menem
-Gdansk
+Gdańsk
 Gdynia
 Gliwice
-Gorzow Wielkopolski
-Grudziadz
+Gorzów Wielkopolski
+Grudziądz
 Gniezno
-Glogow
+Głogów
 Grodzisk Mazowiecki
-Gizycko
+Giżycko
 Gorlice
 Guiyang
 Giza
@@ -119,9 +119,9 @@ Gitega
 Gaborone
 Glasgow
 Georgetown
-Hajnowka
-Hrubieszow
-Halinow
+Hajnówka
+Hrubieszów
+Halinów
 Hel
 Hongkong
 Harbin
@@ -133,74 +133,74 @@ Haga
 Hanoi
 Honiara
 Harare
-Inowroclaw
-Ilawa
+Inowrocław
+Iława
 Imielin
-Ilza
-Ilowa
+Iłża
+Iłowa
 Izbica Kujawska
-Insko
-Iwonicz-Zdroj
+Ińsko
+Iwonicz-Zdrój
 Inczon
 Ibadan
 Isfahan
 Islamabad
 Indianapolis
-Izewsk
+Iżewsk
 Irkuck
-Icel
+Içel
 Irbil
 Izmir
 Jaworzno
-Jastrzebie-Zdroj
-Jelenia Gora
-Jaroslaw
-Jaslo
+Jastrzębie-Zdrój
+Jelenia Góra
+Jarosław
+Jasło
 Jarocin
 Jawor
-Jozefow
+Józefów
 Jelcz-Laskowice
-Jedrzejow
+Jędrzejów
 Jerozolima
 Jamusukro
 Johannesburg
 Jekaterynburg
-Juarez
+Juárez
 Jinan
 Jilin
 Jinjiang
 Jianyang
 Jaunde
-Krakow
+Kraków
 Katowice
 Kielce
 Koszalin
 Kalisz
 Konin
-Kedzierzyn-Kozle
+Kędzierzyn-Koźle
 Krosno
-Kolobrzeg
+Kołobrzeg
 Kutno
 Karaczi
 Kinszasa
 Kair
 Kabul
 Kalkuta
-Kijow
+Kijów
 Konakry
 Kingston
 Kuwejt
-Kiszyniow
+Kiszyniów
 Lublin
 Legnica
 Lubin
 Leszno
 Legionowo
-Lebork
-Lubon
+Lębork
+Luboń
 Lubliniec
-Lubartow
-Luban
+Lubartów
+Lubań
 Londyn
 Lima
 Lagos
@@ -211,56 +211,56 @@ Lilongwe
 Luksemburg
 Libreville
 Lizbona
-Myslowice
+Mysłowice
 Mielec
-Minsk Mazowiecki
+Mińsk Mazowiecki
 Malbork
 Marki
-Myszkow
-Mlawa
-Mragowo
-Myslenice
-Miedzyrzecz
+Myszków
+Mława
+Mrągowo
+Myślenice
+Międzyrzecz
 Mumbaj
 Moskwa
 Meksyk
 Melbourne
 Madryt
-Medellin
+Medellín
 Monako
-Montreal
-Minsk
+Montréal
+Mińsk
 Manila
-Nowy Sacz
+Nowy Sącz
 Nysa
-Nowa Sol
+Nowa Sól
 Nowy Targ
-Nowy Dwor Mazowiecki
+Nowy Dwór Mazowiecki
 Nowa Ruda
-Naklo nad Notecia
+Nakło nad Notecią
 Nowogard
-Namyslow
+Namysłów
 Nisko
 Nowy Jork
 Nankin
 Nairobi
-Nur-Sultan
+Nur-Sułtan
 Nassau
 Nikozja
-Ndzamena
+Ndżamena
 Nowe Delhi
 Niamey
 Nawakszut
 Olsztyn
 Opole
-Ostrow Wielkopolski
-Ostrowiec Swietokrzyski
-Ostroleka
+Ostrów Wielkopolski
+Ostrowiec Świętokrzyski
+Ostrołęka
 Otwock
-Oswiecim
-Olesnica
+Oświęcim
+Oleśnica
 Olkusz
-Ostroda
+Ostróda
 Osaka
 Omdurman
 Ottawa
@@ -270,20 +270,20 @@ Oslo
 Ostrawa
 Omaha
 Odessa
-Poznan
-Plock
-Piotrkow Trybunalski
-Pila
+Poznań
+Płock
+Piotrków Trybunalski
+Piła
 Pabianice
-Pruszkow
-Przemysl
-Piekary Slaskie
+Pruszków
+Przemyśl
+Piekary Śląskie
 Piaseczno
-Pulawy
+Puławy
 Pekin
 Pjongjang
 Pune
-Paryz
+Paryż
 Perth
 Phoenix
 Praga
@@ -291,18 +291,18 @@ Phnom Penh
 Pjongjang
 Pretoria
 Radom
-Rzeszow
+Rzeszów
 Rybnik
-Ruda Slaska
-Raciborz
+Ruda Śląska
+Racibórz
 Rumia
 Radomsko
 Reda
-Rydultowy
+Rydułtowy
 Rzym
 Rijad
 Roseau
-Reykjavik
+Reykjavík
 Ryga
 Rabat
 Rotterdam
@@ -311,15 +311,15 @@ Rimini
 Richmond
 Szczecin
 Sosnowiec
-Slupsk
+Słupsk
 Siedlce
-Suwalki
+Suwałki
 Stargard
-Siemianowice Slaskie
+Siemianowice Śląskie
 Stalowa Wola
 Starachowice
 Skierniewice
-Stambul
+Stambuł
 Szanghaj
 Sao Paulo
 Seul
@@ -329,17 +329,17 @@ Sydney
 Sarajewo
 Sucre
 Skopje
-Sri Dzajawardanapura Kotte
-Torun
+Sri Dźajawardanapura Kotte
+Toruń
 Tychy
-Tarnow
-Tomaszow Mazowiecki
-Tarnowskie Gory
+Tarnów
+Tomaszów Mazowiecki
+Tarnowskie Góry
 Tczew
 Tarnobrzeg
 Turek
 Trzebinia
-Tomaszow Lubelski
+Tomaszów Lubelski
 Tokio
 Tehran
 Toronto
@@ -350,17 +350,17 @@ Thimphu
 Tallinn
 Tbilisi
 Tunis
-Ustron
+Ustroń
 Ustka
 Ustrzyki Dolne
-Ujscie
-Uniejow
+Ujście
+Uniejów
 Ujazd
-Urzedow
-Ulanow
-Ulan Bator
+Urzędów
+Ulanów
+Ułan Bator
 Urumczi
-Ulan-Ude
+Ułan-Ude
 Ufa
 Ujjain
 Uljanowsk
@@ -368,17 +368,17 @@ Ulsan
 Ulhasnagar
 Uberlandia
 Warszawa
-Wroclaw
-Walbrzych
-Wloclawek
+Wrocław
+Wałbrzych
+Włocławek
 Wejherowo
-Wodzislaw Slaski
-Wolomin
-Wrzesnia
-Wyszkow
-Wagrowiec
+Wodzisław Śląski
+Wołomin
+Września
+Wyszków
+Wągrowiec
 Wuhan
-Wieden
+Wiedeń
 Waszyngton
 Wagadugu
 Wientian
@@ -388,15 +388,15 @@ Wellington
 Watykan
 Wuxi
 Zabrze
-Zielona Gora
-Zamosc
+Zielona Góra
+Zamość
 Zgierz
 Zawiercie
-Zdunska Wola
-Zabki
+Zduńska Wola
+Ząbki
 Zgorzelec
 Zakopane
-Zambrow
+Zambrów
 Zibo
 Zhengzhou
 Zhongshan
