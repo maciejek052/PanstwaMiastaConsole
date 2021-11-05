@@ -34,6 +34,7 @@ void initColorPairs() {
     init_pair(4, COLOR_BLACK, COLOR_WHITE); 
     init_pair(5, COLOR_WHITE, COLOR_GREEN);
     init_pair(6, COLOR_WHITE, COLOR_RED); 
+    init_pair(7, COLOR_WHITE, COLOR_YELLOW);
 }
 
 void drawRandomIndexes() {
@@ -239,20 +240,26 @@ void fillVector(int letterIndex) {
 }
 
 void game() {
-    string input[7]; 
-    bool cheatWasUsed = false; 
+    string input[7];
+    bool cheatWasUsed = false;
     int playerPoints = 0;
     int botsPoints[5] = { 0 };
-    string cheatText; 
+    string cheatText;
     string choices[7] = { "Panstwo:", "Miasto:", "Zwierze:", "Zawod:",  "Owoc lub warzywo:", "Kolor:", "ZAKONCZ RUNDE" };
+    int botAnswerPoints[6][6];
+    int playerAnswerPoints[6]; 
     for (size_t x = 0; x < randomIndexes.size(); x++) { // iterate through every round
         allGivenAnswers.clear();
-        answersGivenByBots.clear(); 
+        answersGivenByBots.clear();
         for (auto& a : input) a = ""; // clear input array
-        cheatWasUsed = false; 
-        cheatText = "Masz do dyspozycji jedna podpowiedz, aby jej uzyc nacisnij F2"; 
+        memset(playerAnswerPoints, 0, sizeof(playerAnswerPoints));
+        memset(botAnswerPoints, 0, 36 * (sizeof(int))); 
+        cheatWasUsed = false;
+        int possibleAnswersAmount2 = 0;
+
+        cheatText = "Masz do dyspozycji jedna podpowiedz, aby jej uzyc nacisnij F2";
         clear();
-        int letterIndex = randomIndexes[x]; 
+        int letterIndex = randomIndexes[x];
         letterAnimation(letterIndex);
         fillVector(letterIndex);
         clear();
@@ -260,7 +267,7 @@ void game() {
         ifstream roundArt("assets\\asciiart\\round.txt");
         attron(COLOR_PAIR(1)); // green text on black bg
         // print ascii art for current round number
-        for (int i = 0; i < x+1; i++) {
+        for (int i = 0; i < x + 1; i++) {
             for (int j = 0; j < 6; j++) {
                 getline(roundArt, line);
                 print_centered(stdscr, j, line);
@@ -268,13 +275,13 @@ void game() {
             }
         }
         string letterMessage = "Wylosowana litera: ";
-        letterMessage.push_back(alphabet[letterIndex] - 32); 
+        letterMessage.push_back(alphabet[letterIndex] - 32);
         attron(COLOR_PAIR(2));
-        print_centered(stdscr, 8, letterMessage); 
+        print_centered(stdscr, 8, letterMessage);
         attroff(COLOR_PAIR(2));
         WINDOW* gamewin = newwin(9, xMax - 12, 11, 5);
         box(gamewin, 0, 0);
-        wbkgd(gamewin, COLOR_PAIR(4)); 
+        wbkgd(gamewin, COLOR_PAIR(4));
         refresh();
         wrefresh(gamewin);
         keypad(gamewin, true);
@@ -282,19 +289,19 @@ void game() {
         int highlight = 0;
         noecho();
         while (1) {
-            wclear(gamewin); 
-            box(gamewin, 0, 0); 
+            wclear(gamewin);
+            box(gamewin, 0, 0);
             for (int i = 0; i < 7; i++) {
                 if (i == highlight)
                     wattron(gamewin, A_REVERSE);
-                print_centered(gamewin, i+1, choices[i] + " " + input[i]);
+                print_centered(gamewin, i + 1, choices[i] + " " + input[i]);
                 wattroff(gamewin, A_REVERSE);
                 refresh();
                 wrefresh(gamewin);
             }
             if (difficultyLevel != 2) {
                 print_centered(stdscr, 22, cheatText);
-                refresh(); 
+                refresh();
             }
             choice = wgetch(gamewin);
             switch (choice) {
@@ -309,27 +316,27 @@ void game() {
                     highlight = 6;
                 break;
             case KEY_F(2):
-                if (difficultyLevel != 2 && cheatWasUsed == false && highlight != 6) {
+                possibleAnswersAmount2 = possibleAnswers[highlight].size();
+                if (difficultyLevel != 2 && cheatWasUsed == false && highlight != 6 && possibleAnswersAmount2 != 0) {
                     move(22, 0);
                     clrtoeol();
-                    cheatWasUsed = true;
-                    cheatText = "W tej rundzie wykorzystales juz podpowiedz"; 
-                    int possibleAnswersAmount = possibleAnswers[highlight].size(); 
-                    input[highlight] = possibleAnswers[highlight][rand() % possibleAnswersAmount]; 
+                    // cheatWasUsed = true;
+                    cheatText = "W tej rundzie wykorzystales juz podpowiedz";
+                    input[highlight] = possibleAnswers[highlight][rand() % possibleAnswersAmount2];
                 }
                 break;
             case 8: // backspace
                 if (!input[highlight].empty())
-                    input[highlight].pop_back(); 
+                    input[highlight].pop_back();
                 break;
             case 10: // enter 
-                break; 
+                break;
             default:
                 // it should be changed to only accept cases 65-122 (ascii characters)
                 if (highlight != 6) {
                     // check if user pressed allowed key (only big/small letters, space and dash)
                     if (choice >= 65 && choice <= 90 || choice >= 97 && choice <= 122 || choice == 32 || choice == 45)
-                        input[highlight] += choice; 
+                        input[highlight] += choice;
                 }
             }
             if (choice == 10 && highlight == 6) {
@@ -341,93 +348,110 @@ void game() {
 
         // bots work
         int chanceForGuessing; 
-        int possibleAnswersAmount; 
+        int randomAnswerIndex; 
+        int possibleAnswersAmount = 0; 
         for (int i = 0; i < numberOfBots; i++) {
             vector<string> temp;
             for (int j = 0; j < 6; j++) {
                 chanceForGuessing = rand() % 100 + 1;
                 if (chanceForGuessing <= botPercentageChance) {
-                    possibleAnswersAmount = possibleAnswers[j].size();
-                    temp.push_back(possibleAnswers[j][rand() % possibleAnswersAmount]);
-                    allGivenAnswers.push_back(temp.back()); 
+                    possibleAnswersAmount = possibleAnswers[j].size(); 
+                    if (possibleAnswersAmount == 0)
+                        temp.push_back("-"); 
+                    else {
+                        randomAnswerIndex = rand() % possibleAnswersAmount;
+                        temp.push_back(possibleAnswers[j][randomAnswerIndex]);
+                        allGivenAnswers.push_back(temp.back());
+                    }
                 }
                 else {
-                    temp.push_back("-"); 
+                    temp.push_back("-");
                 }
             }
-            answersGivenByBots.push_back(temp); 
+            answersGivenByBots.push_back(temp);
         }
-        string a; 
-        printw("Twoje odpowiedzi\n");
-        for (int i = 0; i < 6; i++) {
-            /*
-            // case insensitive find occurrence of string in vector
-            auto itr = find_if(possibleAnswers[i].begin(), possibleAnswers[i].end(),
-                [&](auto& s) {
-                    if (s.size() != input[i].size())
-                        return false;
-                    for (size_t i = 0; i < s.size(); ++i)
-                        if (::tolower(s[i]) != ::tolower(input[i][i]))
-                            return false;
-                    return true;
-                }
-            );
-            
-            if (itr != possibleAnswers[i].end()) {
-                attron(COLOR_PAIR(5));
-                a = input[i] + " dobrze";
-                printw(a.data()); 
-                attroff(COLOR_PAIR(5));
-            }
-            else
-            {
-                a = input[i] + " zle";
-                attron(COLOR_PAIR(6));
-                printw(a.data());
-                attroff(COLOR_PAIR(6));
-            }
-            */
-            if (find(possibleAnswers[i].begin(), possibleAnswers[i].end(), input[i]) != possibleAnswers[i].end()) {
-                attron(COLOR_PAIR(5));
-                a = input[i] + " ";
-                printw(a.data());
-                attroff(COLOR_PAIR(5));
-            }
-            else {
-                a = input[i] + " ";
-                attron(COLOR_PAIR(6));
-                printw(a.data());
-                attroff(COLOR_PAIR(6));
-            }
-        }
-        getch();
 
+        for (int i = 0; i < 6; i++) {
+            allGivenAnswers.push_back(input[i]); 
+        }
+
+        // count points 
         for (int i = 0; i < numberOfBots; i++) {
-            string a1 = "\nBot " + to_string(i) + "\n"; 
-            printw(a1.data()); 
             for (int j = 0; j < 6; j++) {
                 if (answersGivenByBots[i][j] == "-") {
-                    attron(COLOR_PAIR(6));
-                    string a2 = answersGivenByBots[i][j] + " ";
-                    printw(a2.data());
-                    attroff(COLOR_PAIR(6));
+                    botAnswerPoints[i][j] = 0;
                 }
                 else {
-                    attron(COLOR_PAIR(5));
-                    string a2 = answersGivenByBots[i][j] + " ";
-                    printw(a2.data());
-                    attroff(COLOR_PAIR(5));
+                    int repeats = count(allGivenAnswers.begin(), allGivenAnswers.end(), answersGivenByBots[i][j]);
+                    if (repeats == 1) {
+                        botAnswerPoints[i][j] = 15;
+                        botsPoints[i] += 15;
+                    }
+                    else {
+                        botAnswerPoints[i][j] = 10;
+                        botsPoints[i] += 10;
+                    }
                 }
-                
             }
         }
+        for (int i = 0; i < 6; i++) {
+            if (find(possibleAnswers[i].begin(), possibleAnswers[i].end(), input[i]) != possibleAnswers[i].end()) {
+                int repeats = count(allGivenAnswers.begin(), allGivenAnswers.end(), input[i]);
+                if (repeats == 1) {
+                    playerAnswerPoints[i] = 15;
+                    playerPoints += 15; 
+                }
+                else {
+                    playerAnswerPoints[i] = 10;
+                    playerPoints += 10;
+                }
+                // printw("Powtorzenia %s to %d\n", input[i].data(), repeats);
+            }
+            else {
+                playerAnswerPoints[i] = 0;
+            }
+           
+        }
+
+        // print points (temporarily)
+        string ooo = "Koniec rundy " + to_string(x+1);
+        attron(COLOR_PAIR(3)); 
+        print_centered(stdscr,0,ooo); 
+        attroff(COLOR_PAIR(3));
+
+        for (int i = 0; i < numberOfBots; i++) {
+            printw("\n\nBot %d, suma %d\n", i+1, botsPoints[i]);
+            for (int j = 0; j < 6; j++) {
+                if (botAnswerPoints[i][j] == 0)
+                    attron(COLOR_PAIR(6));
+                else if (botAnswerPoints[i][j] == 15)
+                    attron(COLOR_PAIR(5));
+                else
+                    attron(COLOR_PAIR(7));
+                printw(answersGivenByBots[i][j].data()); 
+                printw(" %d, ", botAnswerPoints[i][j]); 
+                attroff(COLOR_PAIR(5)); attroff(COLOR_PAIR(6)); attroff(COLOR_PAIR(7));
+            }
+        }
+        attroff(COLOR_PAIR(5)); attroff(COLOR_PAIR(6)); attroff(COLOR_PAIR(7));
+        printw("\n\nGracz, suma %d\n", playerPoints); 
+        for (int i = 0; i < 6; i++) {
+            if (playerAnswerPoints[i] == 0)
+                attron(COLOR_PAIR(6));
+            else if (playerAnswerPoints[i] == 15)
+                attron(COLOR_PAIR(5));
+            else
+                attron(COLOR_PAIR(7));
+            printw(input[i].data()); 
+            printw(" %d, ", playerAnswerPoints[i]);
+        }
         getch(); 
+
     }
 }
-
-int main()
-{
+int main() {
     initscr(); // start ncurses mode
+    curs_set(0); // make cursor invisible
     getmaxyx(stdscr, yMax, xMax);
     initColorPairs(); // initialize color pairs used in program
     

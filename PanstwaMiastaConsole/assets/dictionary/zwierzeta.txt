@@ -30,7 +30,7 @@ emu
 eland
 edredon
 eskulapa
-fenek 
+fenek
 fladra
 flaming
 foka
