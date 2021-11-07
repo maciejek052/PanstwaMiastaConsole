@@ -96,19 +96,26 @@ void mainMenu() {
     print_centered(stdscr, 7, "Autor: Maciej Czech");
     attroff(COLOR_PAIR(2));
     // create a window for input
-    WINDOW* menuwin = newwin(7, xMax - 12, yMax - 8, 5);
+    WINDOW* menuwin = newwin(8, xMax - 12, yMax - 9, 5);
     box(menuwin, 0, 0);
     refresh();
     wrefresh(menuwin);
     keypad(menuwin, true);
-    string choices[5] = { "Nowa gra", "Poziom trudnosci: Latwy", "Liczba rund: 3", "Liczba botow: 3",  "Wyjscie" };
+    string choices[6] = { "Nowa gra", "Poziom trudnosci: Latwy", "Liczba rund: 3", "Liczba botow: 3",  "Imie gracza: ", "Wyjscie" };
     int choice;
     int highlight = 0;
     while (1) {
-        for (int i = 0; i < 5; i++) {
+        wclear(menuwin);
+        box(menuwin, 0, 0); 
+        for (int i = 0; i < 6; i++) {
             if (i == highlight)
                 wattron(menuwin, A_REVERSE);
-            mvwprintw(menuwin, i + 1, 1, choices[i].data());
+            if (i != 4)
+                mvwprintw(menuwin, i + 1, 1, choices[i].data());
+            else {
+                string strWithName = choices[i] + playerName; 
+                mvwprintw(menuwin, i + 1, 1, strWithName.data());
+            }
             wattroff(menuwin, A_REVERSE);
         }
         choice = wgetch(menuwin);
@@ -120,8 +127,8 @@ void mainMenu() {
             break;
         case KEY_DOWN:
             highlight++;
-            if (highlight == 5)
-                highlight = 4;
+            if (highlight == 6)
+                highlight = 5;
             break;
         case KEY_LEFT:
             if (highlight == 1) {
@@ -167,7 +174,16 @@ void mainMenu() {
             else
                 break;
             break;
+        case 8:
+            if (!playerName.empty() && highlight == 4)
+                playerName.pop_back();
+            break;
         default:
+            if (highlight == 4) {
+                // check if user pressed allowed key (only big/small letters, space and dash)
+                if (choice >= 65 && choice <= 90 || choice >= 97 && choice <= 122 || choice == 32 || choice == 45)
+                    playerName += choice;
+            }
             break;
         }
         // this check is to prevent starting the game while user is selecting bot/round count
