@@ -191,7 +191,7 @@ void mainMenu() {
             flash(); // neat effect
             break;
         }
-        else if (choice == 10 && highlight == 4) { // user picked exit option
+        else if (choice == 10 && highlight == 5) { // user picked exit option
             flash();
             exit(0);
         }
@@ -578,11 +578,11 @@ void game() {
 int main() {
     initscr(); // start ncurses mode
     curs_set(0); // make cursor invisible
-    noecho();
-    getmaxyx(stdscr, yMax, xMax);
+    noecho(); // disable showing characters user typed
+    getmaxyx(stdscr, yMax, xMax); // determine size of terminal screen
     initColorPairs(); // initialize color pairs used in program
     while (1) {
-        clear();
+        clear(); // clear screen
         mainMenu(); // print main menu
         startingGameAnimation(); // shows what game options user picked
         srand(time(NULL)); // start randomizing
